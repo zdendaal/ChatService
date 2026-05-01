@@ -66,3 +66,7 @@ wwwroot/
 
 # Others
 *.swp
+
+# Logs
+logs/
+.vs/

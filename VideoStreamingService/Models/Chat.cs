@@ -11,7 +11,7 @@ namespace VideoStreamingService.Models
         [Key]
         public long Id { get; set; }
         [Required(ErrorMessage = "Chat must have a name")]
-        [StringLength(100, ErrorMessage = "Maximum chat name length is 100")]
+        [StringLength(BusinessSettings.chatNameMaxLength, MinimumLength = BusinessSettings.chatNameMinLength, ErrorMessage = "{0} name length must be between {1} and {2} characters.")]
         public string Name { get; set; }
         public IList<Message> Messages { get; set; }
         public IList<ChatMember> Members { get; set; }

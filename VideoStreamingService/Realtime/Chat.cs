@@ -39,7 +39,7 @@ namespace VideoStreamingService.Realtime
                 {
                     Groups.AddToGroupAsync(
                         Context.ConnectionId,
-                        chatId.ToString()?? throw new ArgumentNullException($"ChatId {chatId} in database is null, UserId {userId}"));
+                        chatId.ToString()?? throw new ArgumentNullException($"ChatId {chatId} in database is null, UserId {userId}."));
                 });
 
             await base.OnConnectedAsync();
@@ -64,7 +64,7 @@ namespace VideoStreamingService.Realtime
                 { 
                     Groups.RemoveFromGroupAsync(
                         Context.ConnectionId, 
-                        chatId.ToString()?? throw new ArgumentNullException($"ChatId {chatId} in database is null, UserId {userId}")); 
+                        chatId.ToString()?? throw new ArgumentNullException($"ChatId {chatId} in database is null, UserId {userId}.")); 
                 });
 
             await base.OnDisconnectedAsync(exception);

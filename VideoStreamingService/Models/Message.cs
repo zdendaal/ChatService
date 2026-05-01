@@ -6,8 +6,10 @@ namespace VideoStreamingService.Models
 {
     public class Message
     {
+        [Key]
+        public long Id { get; set; }
         [Required(ErrorMessage = "Message cannot be empty")]
-        [StringLength(20000, ErrorMessage = "Maximum length is 20000")]
+        [StringLength(BusinessSettings.messageNameMaxLength, MinimumLength = BusinessSettings.messageNameMinLength, ErrorMessage = "{0} length must be between {1} and {2} characters.")]
         public string Content { get; set; } = string.Empty;
         public DateTime Timestamp { get; set; } = DateTime.UtcNow;
         [ForeignKey(nameof(SenderId))]

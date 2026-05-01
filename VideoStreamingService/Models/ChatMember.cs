@@ -15,11 +15,16 @@ namespace VideoStreamingService.Models
         public Chat Chat { get; set; }
         public ChatMemberRole Role { get; set; }
         public DateTime JoinedAt { get; set; } = DateTime.UtcNow;
+        public DateTime LastSeen { get; set; } = DateTime.UtcNow;
     }
 
+    /// <summary>
+    /// User roles in chat
+    /// </summary>
     public enum ChatMemberRole
     {
         Owner,
+        Maintainer,
         Member
     }
 }
