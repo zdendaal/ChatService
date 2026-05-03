@@ -1,20 +1,14 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
-using MySql.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Serilog;
-using System.Reflection;
 using System.Text;
-using System.Text.Json.Serialization;
-using VideoStreamingService;
-using VideoStreamingService.Database;
-using VideoStreamingService.Realtime;
-using VideoStreamingService.Services;
-using System.Text.Json;
+using ChatService;
+using ChatService.Database;
+using ChatService.Realtime;
+using ChatService.Services;
 using System.IdentityModel.Tokens.Jwt;
 
 
@@ -145,7 +139,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference("scalar/v1", options =>
     {
-        options.WithTitle("VideoStreamingService API documentation");
+        options.WithTitle("ChatService API documentation");
     });
 }
 
@@ -168,8 +162,8 @@ app.UseExceptionHandler(error =>
         var exceptionHandlerPathFeature = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature>();
         if (exceptionHandlerPathFeature?.Error != null)
         {
-            Log.Error(exceptionHandlerPathFeature.Error, "Unhandled exception occurred");
-            await context.Response.WriteAsync("Internal server error");
+            Log.Error(exceptionHandlerPathFeature.Error, "Unhandled exception occurred.");
+            await context.Response.WriteAsync("Internal server error.");
         }
     });
 });

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
 
-namespace VideoStreamingService.Models
+namespace ChatService.Models
 {
     /// <summary>
     /// User data model
@@ -22,7 +22,7 @@ namespace VideoStreamingService.Models
         [Required(ErrorMessage = "Country cannot be empty.")]
         public required string Country { get; set; }
         public required string ProfilePictureUrl { get; set; } = string.Empty;
-        public IList<ChatMember> Chats { get; set; }
+        public IList<ChatMember> Chats { get; set; } = new List<ChatMember>();
         public UserRole Role { get; set; } = UserRole.User;
     }
 

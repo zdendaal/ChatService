@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace VideoStreamingService.DTOs
+namespace ChatService.DTOs
 {
     /// <summary>
     /// Class serving only as DTO for user credentials

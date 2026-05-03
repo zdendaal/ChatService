@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using VideoStreamingService.Database;
-using VideoStreamingService.Models;
-using VideoStreamingService.Services;
-using VideoStreamingService.DTOs;
+using ChatService.Database;
+using ChatService.Models;
+using ChatService.Services;
+using ChatService.DTOs;
 
-namespace VideoStreamingService.APIs
+namespace ChatService.APIs
 {
     [ApiController]
     [Route("[controller]")]

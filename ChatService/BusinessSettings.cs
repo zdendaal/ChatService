@@ -1,8 +1,8 @@
-﻿namespace VideoStreamingService
+﻿namespace ChatService
 {
     public static class BusinessSettings
     {
-        public const string name = "VideoStreamingService";
+        public const string name = "ChatService";
         public static readonly TimeSpan tokenExpiration = TimeSpan.FromHours(2);
 
         public const int nicknameMinLength = 3;

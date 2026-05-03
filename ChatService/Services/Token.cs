@@ -3,9 +3,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using VideoStreamingService.Models;
+using ChatService.Models;
 
-namespace VideoStreamingService.Services
+namespace ChatService.Services
 {
     public class Token
     {

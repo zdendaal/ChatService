@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
-using VideoStreamingService.Models;
+using ChatService.Models;
 
 
-namespace VideoStreamingService.Database
+namespace ChatService.Database
 {
     public class BusinessData : DbContext
     {

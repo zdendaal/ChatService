@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace VideoStreamingService.Models
+namespace ChatService.Models
 {
     public class Message
     {

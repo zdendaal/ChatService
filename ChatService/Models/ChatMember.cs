@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VideoStreamingService.Models
+namespace ChatService.Models
 {
     /// <summary>
     /// Chat member data model -> connects users and chats, adds a role and joined date for each user in chat

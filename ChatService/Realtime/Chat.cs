@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
-using VideoStreamingService.Database;
+using ChatService.Database;
 
-namespace VideoStreamingService.Realtime
+namespace ChatService.Realtime
 {
     /// <summary>
     /// Class defining SingalR methods for chatting

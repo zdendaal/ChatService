@@ -1,4 +1,4 @@
-﻿namespace VideoStreamingService
+﻿namespace ChatService
 {
     public class JWTConf
     {
